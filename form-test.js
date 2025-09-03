@@ -4,22 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent actual form submission
+            event.preventDefault(); 
             
-            // Get form data
             const formData = new FormData(form);
             const name = formData.get('name');
             const message = formData.get('message');
             
-            // Display the submitted data
             alert(`Form submitted successfully!\n\nName: ${name}\nMessage: ${message}`);
             
-            // Optional: Log to console as well
             console.log('Form Data Submitted:');
             console.log('Name:', name);
             console.log('Message:', message);
             
-            // Optional: Clear the form after submission
             form.reset();
         });
     }
